@@ -23,7 +23,7 @@ ANTISPAM = int(os.getenv('ANTISPAM', CONFIG['antispam']))
 
 # Initialize bot and dispatcher
 storage = MemoryStorage()
-bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
+bot = Bot(token=2119224139:AAGMAa5TpnkS-vULnRLbS7UV4_9Lmxnkxs4, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot, storage=storage)
 
 # Configure logging
@@ -39,8 +39,8 @@ BOT_ID = bot_info.id
 
 # USE YOUR ROTATING PROXY API IN DICT FORMAT http://user:pass@providerhost:port
 proxies = {
-           'http': 'http://qnuomzzl-rotate:4i44gnayqk7c@p.webshare.io:80/',
-           'https': 'http://qnuomzzl-rotate:4i44gnayqk7c@p.webshare.io:80/'
+           'http': 'http://dmgrwlso-rotate:wijhqyiiq1g2@p.webshare.io:80/',
+           'https': 'http://xulxmvlr-rotate:kolc8oyl0e8j@p.webshare.io:80/'
 }
 
 session = requests.Session()
@@ -66,12 +66,12 @@ async def is_owner(user_id):
 async def helpstr(message: types.Message):
     # await message.answer_chat_action('typing')
     keyboard_markup = types.InlineKeyboardMarkup(row_width=3)
-    btns = types.InlineKeyboardButton("Bot Source", url="https://github.com/xbinner18/Mrbannker")
+    btns = types.InlineKeyboardButton("Bot Source", url="https://github.com/darkselle6/Mrbannker")
     keyboard_markup.row(btns)
     FIRST = message.from_user.first_name
     MSG = f'''
 Hello {FIRST}, Im {BOT_NAME}
-U can find my Boss  <a href="tg://user?id={OWNER}">HERE</a>
+U can find my Boss  <a href="tg://user?id={1991559687}">HERE</a>
 Cmds /chk /info /bin'''
     await message.answer(MSG, reply_markup=keyboard_markup,
                         disable_web_page_preview=True)
@@ -96,7 +96,7 @@ async def info(message: types.Message):
 <b>USERNAME:</b> @{username}
 <b>FIRSTNAME:</b> {first}
 <b>BOT:</b> {is_bot}
-<b>BOT-OWNER:</b> {await is_owner(user_id)}
+<b>BOT-OWNER:</b> {await is_owner(1991559687)}
 ╘═════════''')
 
 
@@ -124,7 +124,7 @@ Currency⇢ <u>{r["currency"]}</u>
 Country⇢ <u>{r["country"]}({r["code"]})[{r["flag"]}]</u>
 SENDER: <a href="tg://user?id={ID}">{FIRST}</a>
 BOT⇢ @{BOT_USERNAME}
-OWNER⇢ <a href="tg://user?id={OWNER}">LINK</a>
+OWNER⇢ <a href="tg://user?id={1991559687}">LINK</a>
 '''
     await message.reply(INFO)
 
